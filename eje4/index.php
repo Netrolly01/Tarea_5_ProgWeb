@@ -52,25 +52,17 @@ $zona_horaria = $weather_respuesta['timezone']; // Zona horaria
 <script>
     window.onload = function () {
         let page = document.querySelector('html');
-        page.style.background = "url('https://images.visitarepublicadominicana.org/clima-en-republica-dominicana.jpg')";
+        page.style.background = "url('https://beforeboarding.com/wp-content/uploads/2023/10/airports-in-the-dominican-republic-travel.jpg')";
         page.style.backgroundSize = "cover";
         page.style.backgroundAttachment = "fixed";
 
         let body = document.querySelector('body');
-        body.style.background = "linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85))";
+        body.style.background = "linear-gradient(rgba(60, 59, 59, 0.57), rgba(64, 63, 63, 0.85))";
         body.style.borderRadius = "10px";
         body.style.margin = "90px auto";
         body.style.width = "80%";
         body.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
-
-        // let container = document.querySelector('.container');
-        // container.style.background = "rgba(255, 255, 255, 0.95)";
-        // container.style.padding = "20px";
-        // container.style.borderRadius = "10px";
-        // container.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)";
-        // container.style.textAlign = "center";
-        // container.style.width = "50%";
-        // container.style.margin = "40px auto";
+        body.style.textAlign = "center";
 
         let title = document.querySelector('.title');
         title.style.color = "#007bff";

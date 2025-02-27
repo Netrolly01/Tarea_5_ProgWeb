@@ -70,12 +70,12 @@ window.onload = function () {
     translateText(punchline, "translated-punchline");
 
     // Aplicar estilos sin afectar la funcionalidad
-    document.documentElement.style.background = "url('https://www.bupasalud.com/sites/default/files/styles/640_x_400/public/articulos/2023-09/fotos/mujer-riendo.jpg?itok=aPrGfRbs')";
+    document.documentElement.style.background = "url('https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/09/27205257/sonrisas.jpg')";
     document.documentElement.style.backgroundSize = "cover";
     document.documentElement.style.backgroundAttachment = "fixed";
 
     let body = document.body;
-    body.style.background = "linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85))";
+    body.style.background = "linear-gradient(rgba(82, 80, 80, 0.85), rgba(76, 75, 75, 0.85))";
     body.style.borderRadius = "10px";
     body.style.margin = "90px auto";
     body.style.width = "80%";

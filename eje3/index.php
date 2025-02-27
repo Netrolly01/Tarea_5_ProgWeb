@@ -30,7 +30,7 @@ $ejercicio = (object) $ejercicio;
 <div class="field">
         <label class="label">Nombre</label>
         <div class="control">
-            <input class="input" type="text" placeholder="Escriba el nombre de la persona" name="nombre" />
+            <input class="input" type="text" placeholder="Escriba en ingles el nombre de un pais" name="nombre" />
         </div>
     </div>
 
@@ -50,44 +50,40 @@ $ejercicio = (object) $ejercicio;
     window.onload = function () {
         // Fondo de la página con imagen fija
         let page = document.querySelector('html');
-        page.style.background = "url('https://media.istockphoto.com/id/1371896330/es/foto/feliz-mujer-asi%C3%A1tica-en-su-d%C3%ADa-de-graduaci%C3%B3n.jpg?s=612x612&w=0&k=20&c=sngoIuay3pzfpRlBK88kxZkOErniTpOjynPDiJWWc3A=')";
+        page.style.background = "url('https://www.redem.org/wp-content/uploads/2020/06/mejores-universidades-del-mundo.jpg)";
         page.style.backgroundSize = "cover";
         page.style.backgroundAttachment = "fixed";
 
-        // Degradado para el body
-        let body = document.querySelector('body');
+        // Fondo con transparencia para el cuerpo
+        let body = document.body;
         body.style.background = "linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85))";
-
+        body.style.padding = "20px";
         body.style.borderRadius = "10px";
-        body.style.margin = "90px auto"; // Mueve todo el contenido hacia abajo
+        body.style.margin = "90px auto";
         body.style.width = "80%";
         body.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
+        body.style.textAlign = "center";
 
         // Estilos para el formulario
         let form = document.querySelector("form");
         form.style.background = "rgba(255, 255, 255, 0.9)";
-        form.style.padding = "15px";
+        form.style.padding = "20px";
         form.style.borderRadius = "10px";
         form.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
         form.style.marginTop = "20px";
+        form.style.maxWidth = "500px";
+        form.style.marginLeft = "auto";
+        form.style.marginRight = "auto";
 
-        // Estilos para el botón de enviar
-        let button = document.querySelector(".button");
-        button.style.background = "#007bff";
-        button.style.color = "white";
-        button.style.padding = "10px 20px";
-        button.style.borderRadius = "5px";
-        button.style.fontSize = "16px";
-        button.style.cursor = "pointer";
-        button.style.border = "none";
-        button.style.transition = "0.3s";
+        // Estilos para el título
+        let title = document.querySelector(".title");
+        title.style.color = "#007bff";
+        title.style.fontSize = "28px";
+        title.style.fontWeight = "bold";
 
-        button.onmouseover = function () {
-            button.style.background = "#0056b3";
-        };
-        button.onmouseout = function () {
-            button.style.background = "#007bff";
-        };
+        let subtitle = document.querySelector(".subtitle");
+        subtitle.style.color = "#555";
+        subtitle.style.fontSize = "18px";
 
         // Estilos para los inputs
         let inputs = document.querySelectorAll("input");
@@ -100,10 +96,45 @@ $ejercicio = (object) $ejercicio;
             input.style.marginBottom = "10px";
         });
 
-        // Estilo para el iframe donde aparecerá el resultado
+        // Estilos para el botón de enviar
+        let button = document.querySelector(".button");
+        button.style.background = "#007bff";
+        button.style.color = "white";
+        button.style.padding = "10px 20px";
+        button.style.borderRadius = "5px";
+        button.style.fontSize = "16px";
+        button.style.cursor = "pointer";
+        button.style.border = "none";
+        button.style.transition = "0.3s";
+        button.style.marginTop = "10px";
+
+        button.onmouseover = function () {
+            button.style.background = "#0056b3";
+        };
+        button.onmouseout = function () {
+            button.style.background = "#007bff";
+        };
+
+        // Estilos para el iframe
         let iframe = document.querySelector("iframe[name='resultado']");
+        iframe.style.display = "block";
+        iframe.style.margin = "20px auto";
+        iframe.style.width = "80%";
+        iframe.style.maxWidth = "900px";
+        iframe.style.height = "500px";
         iframe.style.border = "2px solid #007bff";
         iframe.style.borderRadius = "10px";
-        iframe.style.marginTop = "20px";
+        iframe.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.1)";
+        iframe.style.opacity = "0";
+        iframe.style.transform = "translateY(10px)";
+        iframe.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+
+        // Mostrar el iframe cuando se envíe el formulario
+        document.querySelector("form").addEventListener("submit", function () {
+            setTimeout(() => {
+                iframe.style.opacity = "1";
+                iframe.style.transform = "translateY(0)";
+            }, 200);
+        });
     };
 </script>

@@ -14,7 +14,7 @@
             top: 0;
             left: 0;
             width: 100vw;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(21, 20, 20, 0.65);
             backdrop-filter: blur(10px);
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
             z-index: 9999;
@@ -24,7 +24,7 @@
 
         /* Cambia el fondo al hacer scroll */
         .navbar.scrolled {
-            background: rgba(255, 255, 255, 1);
+            background: rgba(75, 72, 72, 0.66);
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
         }
 

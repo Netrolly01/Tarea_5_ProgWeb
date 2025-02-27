@@ -36,7 +36,7 @@ $ejercicio = (object) $ejercicio;
 <script>
     window.onload = function () {
         // Fondo de la página con imagen fija
-        document.documentElement.style.background = "url('https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/C049/production/_119152294_tres_generaciones_mujeres_976_mano_alzada-1.jpg.webp') no-repeat center center fixed";
+        document.documentElement.style.background = "url('https://png.pngtree.com/png-clipart/20230915/original/pngtree-multicultural-group-cartoon-characters-diverse-young-adults-social-man-design-vector-png-image_12197184.png') no-repeat center center fixed";
         document.documentElement.style.backgroundSize = "cover";
 
         // Fondo con transparencia para el cuerpo
